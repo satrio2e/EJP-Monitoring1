@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Container</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="lib/paho-mqtt-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="containerHeader">
+        <div class="containerHeaderLeft">
+            <div class="logoGambar">
+                <img src="img/Epsindo.png" alt="">
+            </div>
+            <div class="deskripsi">
+                <div class="deskripsi1">
+                    <h1>PT. EPSINDO JAYA PRATAMA</h1>
+                </div>
+                <div class="deskripsi2">
+                    <h3>Electric Submersible Pumping System <br>
+                    Development and Manufacturing</h3>
+                </div>
+            </div> 
+        </div>
+        <div class="containerHeaderCenter">
+            <h1>ONLINE MONITORING MOTOR CONTROLLER</h1>
+        </div>
+        <div class="containerHeaderRight"></div>
+    </div>
+    <div class="containerContent">
+        <div class="containerContentLeft">
+            <div class="judul"><h1>VSD</h1></div>
+            <div class="indicatorLamp">
+                <div class="ready">
+                        <h3>READY</h3>
+                    <div id="statusCircleReady" class="circle gray"></div>
+                </div>
+                <div class="run">
+                        <h3>RUN</h3>
+                    <div id="statusCircleRun" class="circle gray"></div>
+                </div>
+                <div class="FAULT">
+                        <h3>FAULT</h3>
+                    <div id="statusCircleFault" class="circle gray"></div>
+                </div>
+            </div>
+            <div class="isiVSD">
+                <div class="isiVSDLeft">
+                    <div class="isiVSDLeft1">Frequency SetPoint</div>
+                    <div class="isiVSDLeft2">Frequency Actual</div>
+                    <div class="isiVSDLeft3">Number of Start</div>
+                    <div class="isiVSDLeft4">Volt AB</div>
+                    <div class="isiVSDLeft5">Volt BC</div>
+                    <div class="isiVSDLeft6">Volt CA</div>
+                    <div class="isiVSDLeft7">Current A</div>
+                    <div class="isiVSDLeft8">Current B</div>
+                    <div class="isiVSDLeft9">Current C</div>
+                </div>
+                <div class="isiVSDCenter">
+                    <div id="freqSetVal" class="isiVSDCenter1">0.0</div>
+                    <div id="ActVal" class="isiVSDCenter2">0.0</div>
+                    <div id="NoOfStart" class="isiVSDCenter3">0.0</div>
+                    <div id="VoltAB" class="isiVSDCenter4">0.0</div>
+                    <div id="VoltBC" class="isiVSDCenter5">0.0</div>
+                    <div id="VoltCA" class="isiVSDCenter6">0.0</div>
+                    <div id="CurrentA" class="isiVSDCenter7">0.0</div>
+                    <div id="CurrentB" class="isiVSDCenter8">0.0</div>
+                    <div id="CurrentC" class="isiVSDCenter9">0.0</div>
+                </div>
+                <div class="isiVSDRight">
+                    <div class="isiVSDRight1">Hz</div>
+                    <div class="isiVSDRight2">Hz</div>
+                    <div class="isiVSDRight3"><br></div>
+                    <div class="isiVSDRight4">Volt</div>
+                    <div class="isiVSDRight5">Volt</div>
+                    <div class="isiVSDRight6">Volt</div>
+                    <div class="isiVSDRight7">Amp</div>
+                    <div class="isiVSDRight8">Amp</div>
+                    <div class="isiVSDRight9">Amp</div>
+                </div>
+            </div>
+        </div>
+        <div class="containerContentCenter">
+            <div class="containerContentCenterAtas">
+               <div class="judul"><h1>Down Hole</h1></div> 
+               <div class="isiDownhole">
+                    <div class="isiDownholeLeft">
+                        <div class="isiDownholeLeft1">Intake Pressure</div>
+                        <div class="isiDownholeLeft2">Intake Temperature</div>
+                        <div class="isiDownholeLeft3">Discharge Pressure</div>
+                        <div class="isiDownholeLeft4">Discharge Temperature</div>
+                    </div>
+                    <div class="isiDownholeCenter">
+                        <div id="IntakePress" class="isiDownholeCenter1">0.0</div>
+                        <div id="IntakeTemp" class="isiDownholeCenter2">0.0</div>
+                        <div id="DischargePress" class="isiDownholeCenter3">0.0</div>
+                        <div id="DischargeTemp" class="isiDownholeCenter4">0.0</div>
+                    </div>
+                    <div class="isiDownholeRight">
+                        <div class="isiDownholeRight1">Psi</div>
+                        <div class="isiDownholeRight2">°C</div>
+                        <div class="isiDownholeRight3">Psi</div>
+                        <div class="isiDownholeRight4">°C</div>
+                    </div>
+                </div>
+            </div>
+            <div class="containerContentCenterBawah">
+                <div class="canvas">
+                    <canvas id="chart"></canvas>
+                </div>
+                <div class="tombol">
+                    <div class="tombol1">
+                        <button onclick="moveLeft()"><</button>
+                    </div>
+                    <div class="tombol2">
+                        <span class="status" id="status">LIVE</span>
+                    </div>
+                    <div class="tombol3">
+                        <button onclick="moveRight()">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerContentRight">
+             <iframe
+                id="mapFrame"
+                src="https://www.google.com/maps?q=-3.453918, 104.247187&z=15&output=embed"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    <div class="containerFooter">
+        <div class="containerFooterAtas">
+            PT.Epsindo Jaya Pratama is an ISO 9001:2008 Certified Company
+        </div>
+        <div class="containerFooterBawah">
+            Copyright @2025 Site Developed and maintain by MA Teams
+        </div>
+    </div>
+  </div>
+</body>
+</html>

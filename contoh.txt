@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MQTT Pump Status</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- MQTT JS -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+
+<h1>Pump 1 Status</h1>
+
+<div id="statusCircle" class="circle gray"></div>
+
+<div class="box">
+    <p>Time: <span id="time">-</span></p>
+    <p>Status Run: <span id="run">-</span></p>
+    <p>Status Ready: <span id="ready">-</span></p>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>

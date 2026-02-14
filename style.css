@@ -1,0 +1,383 @@
+/* reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* background full screen */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* tengah horizontal */
+  align-items: center;       /* tengah vertical */
+  background: linear-gradient(135deg, #3d485c, #34496d);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* container tengah */
+.container {
+  width: 1300px;
+  height: 650px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerHeader {
+    width: 100%;
+    height: 12%;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(180deg, #5878b4, #d5e2f8);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerHeader .containerHeaderLeft {
+    width: 25%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+}
+
+.containerHeader .containerHeaderLeft .logoGambar img {
+    width: 70px;              
+    flex-shrink: 0;
+}
+
+.containerHeader .containerHeaderLeft .deskripsi {
+    width: 100%;
+    text-align: left;
+}
+
+.containerHeader .containerHeaderLeft .deskripsi .deskripsi1 h1 {
+    font-size: 15px;
+}
+
+.containerHeader .containerHeaderLeft .deskripsi .deskripsi2 h3 {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.containerHeader .containerHeaderCenter {
+    width: 50%;
+    height: 100%;
+    align-content: center;
+}
+
+.containerHeader .containerHeaderCenter h1 {
+    font-size: 25px;
+}
+
+.containerHeader .containerHeaderRight {
+    width: 25%;
+    height: 100%;
+}
+
+.container .containerContent {
+    width: 100%;
+    height: 81%;
+    /* background-color: rgb(167, 113, 44); */
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 5px;
+}
+
+.container .containerContent .containerContentLeft {
+    width: 29%;
+    height: 100%;
+    border: 2px solid #8a9daa;
+    background:rgb(65, 75, 88);
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    color: #F5F5F5;
+}
+
+.container .containerContent .containerContentLeft .indicatorLamp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px auto;
+    background: #aaa;
+}
+
+.green { background: #2ecc71; }
+.red   { background: #cc2e2e; }
+.gray  { background: #aaa; }
+
+.container .containerContent .containerContentLeft .isiVSD {
+    width: 100%;
+    margin-top:20px ;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+}
+
+.container .containerContent .containerContentLeft .isiVSD .isiVSDLeft {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentLeft .isiVSD .isiVSDCenter {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentLeft .isiVSD .isiVSDRight {
+    width: 15%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter {
+    width: 35%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas{
+    width: 100%;
+    height: 40%;
+    border: 2px solid #8a9daa;
+    background:rgb(65, 75, 88);
+    border-radius: 10px 10px 10px 10px;
+    color: #F5F5F5;
+    align-items: center ;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 10px;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole .isiDownholeLeft {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole .isiDownholeCenter {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole .isiDownholeRight {
+    width: 7%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterBawah{
+    width: 100%;
+    height: 59%;
+    border: 2px solid #8a9daa;
+    background:rgb(219, 215, 215);
+    border-radius: 10px 10px 10px 10px;
+    color: #F5F5F5;
+}
+
+.containerContentCenterBawah .canvas {
+    width: 100%;
+    height: 90%;
+    position: relative;
+}
+
+.containerContentCenterBawah canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.containerContentCenterBawah .tombol {
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 1.5vw;
+}
+
+.containerContentCenterBawah .tombol1, .tombol2, .tombol3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: rgb(65, 75, 88);
+}
+
+
+.container .containerContent .containerContentRight {
+    width: 38%;
+    height: 100%;
+    background-color:rgb(65, 75, 88);
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+}
+
+#mapFrame {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.container .containerFooter {
+    width: 100%;
+    height: 7%;
+    background: linear-gradient(180deg, #d5e2f8, #5878b4);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+    font-size: 10px;
+    justify-content: center;
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 1240px) {
+
+.containerHeader .containerHeaderLeft .deskripsi {
+    width: 100%;
+    text-align: left;
+}
+
+.containerHeader .containerHeaderLeft .deskripsi .deskripsi1 h1 {
+    font-size: 10px;
+}
+
+.containerHeader .containerHeaderLeft .deskripsi .deskripsi2 h3 {
+    font-size: 7px;
+    font-weight: 500;
+}
+.containerHeader .containerHeaderCenter {
+    width: 50%;
+    height: 100%;
+    align-content: center;
+}
+
+.containerHeader .containerHeaderCenter h1 {
+    font-size: 20px;
+}
+
+.container .containerContent .containerContentLeft .isiVSD .isiVSDLeft {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentLeft .isiVSD .isiVSDCenter {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentLeft .isiVSD .isiVSDRight {
+    width: 15%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole .isiDownholeLeft {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole .isiDownholeCenter {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.container .containerContent .containerContentCenter .containerContentCenterAtas .isiDownhole .isiDownholeRight {
+    width: 7%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+}
