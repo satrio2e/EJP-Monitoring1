@@ -71,11 +71,11 @@ function renderChart() {
       options: {
         animation: false,
         responsive: true,
-        maintainAspectRatio: false,   // ← INI PENTING
+        maintainAspectRatio: false,   
           
         interaction: {
-          mode: 'index',     // ← ini penting
-          intersect: false   // ← ini penting
+          mode: 'index',     
+          intersect: false   
         },
 
         plugins: {
@@ -85,7 +85,7 @@ function renderChart() {
               boxWidth: 12,
               padding: 15,
               font: {
-                size: 10   // ← ubah ukuran di sini
+                size: 10  
               }
             }
           },
@@ -159,3 +159,4 @@ async function refresh() {
   setInterval(refresh, REFRESH_MS);
 
 })();
+
