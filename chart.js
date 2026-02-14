@@ -80,7 +80,7 @@ function renderChart() {
 
         plugins: {
           legend: {
-            position: 'bottom',
+            position: 'none',
             labels: {
               boxWidth: 12,
               padding: 15,
@@ -157,4 +157,5 @@ async function refresh() {
   await fetchData();
   renderChart();
   setInterval(refresh, REFRESH_MS);
+
 })();
